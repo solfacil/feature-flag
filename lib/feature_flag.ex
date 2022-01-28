@@ -1,0 +1,2 @@
+defmodule FeatureFlag do
+end
