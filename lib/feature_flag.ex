@@ -15,12 +15,17 @@ defmodule FeatureFlag do
 
   """
 
+  @type check_t :: boolean() | integer() | float() | binary() | list() | map()
+
+  @behaviour FeatureFlag.Behaviour
+
   @doc """
   Start a new client instance with default options given a Launch Darkly secret key.
 
   A client instance must be started for feature flag evaluation to work. If instance
   is already started, an error will be thrown.
   """
+  @impl true
   @spec start_client(String.t()) :: :ok
   def start_client(secret_key) do
     :ok =
@@ -36,6 +41,7 @@ defmodule FeatureFlag do
 
   If no instances was started, an error will be thrown.
   """
+  @impl true
   @spec stop_client() :: :ok
   def stop_client() do
     :ok = :ldclient.stop_instance()
@@ -59,8 +65,8 @@ defmodule FeatureFlag do
       FeatureFlag.check("feature-name", user)
 
   """
-  @spec check(String.t(), FeatureFlag.User.t(), boolean()) ::
-          boolean() | integer() | float() | binary() | list() | map()
+  @impl true
+  @spec check(String.t(), FeatureFlag.User.t(), boolean()) :: check_t()
   def check(flag_name, %FeatureFlag.User{} = user, default \\ false) do
     built_in_user =
       user
