@@ -1,6 +1,7 @@
 defmodule FeatureFlag do
   @moduledoc """
-  Feature flag module to abstract [Launch Darkly SDK](https://github.com/launchdarkly/erlang-server-sdk).
+  Feature flag module to abstract [Launch Darkly SDK](
+  https://github.com/launchdarkly/erlang-server-sdk).
 
   A client instance must be started for feature flag evaluation to work.
   We recommend a GenServer to start a client instance on application startup and then feel
@@ -43,8 +44,9 @@ defmodule FeatureFlag do
   @doc """
   Check given flag name for given user.
 
-  `user` is a struct from `FeatureFlag.User` which implements all the user attributes from Launch Darkly documentation.
-  See [Understanding user attributes](https://docs.launchdarkly.com/home/users/attributes#understanding-user-attributes)
+  `user` is a struct from `FeatureFlag.User` which implements all the user attributes from
+  Launch Darkly documentation. See [Understanding user attributes](
+  https://docs.launchdarkly.com/home/users/attributes#understanding-user-attributes)
   and `FeatureFlag.User` module for more details.
 
   ### Good to know

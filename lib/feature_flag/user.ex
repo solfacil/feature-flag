@@ -1,8 +1,11 @@
 defmodule FeatureFlag.User do
   @moduledoc """
-  For a list of all built-in user attributes LaunchDarkly supports, read [Understanding user attributes](https://docs.launchdarkly.com/home/users/attributes#understanding-user-attributes).
+  For a list of all built-in user attributes LaunchDarkly supports, read
+  [Understanding user attributes](
+  https://docs.launchdarkly.com/home/users/attributes#understanding-user-attributes).
 
-  For custom user attributes, read [Setting custom user attributes](https://docs.launchdarkly.com/home/users/attributes#setting-custom-user-attributes).
+  For custom user attributes, read [Setting custom user attributes](
+  https://docs.launchdarkly.com/home/users/attributes#setting-custom-user-attributes).
 
   Only `key` attribute are required.
   """
