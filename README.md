@@ -4,7 +4,18 @@ FeatureFlag is project to abstract the communication with [Launch Darkly SDK](ht
 
 ## Installation
 
-TODO
+Add git repository `feature_flag` in your `mix.exs`:
+
+```elixir
+defp deps do
+  [
+    ...,
+    {:feature_flag, git: "https://github.com/solfacil/feature-flag.git", tag: "0.0.1"}
+  ]
+end
+```
+
+For details about git repository in `deps`, read [Git options](https://hexdocs.pm/mix/1.12/Mix.Tasks.Deps.html#module-git-options-git).
 
 ## Usage
 
